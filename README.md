@@ -1,4 +1,7 @@
 # Finanza
 Personal Finance App for managing and recording your fund and transactions.
 
-Note: Development is ongoing
+
+HOW TO USE
+
+Development is ongoing. Kindly wait..
