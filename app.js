@@ -27,9 +27,10 @@ var budgetController = (function(){
            inc: []
        },
        totals: {
-           exp: [],
-           inc: []
-       }
+           exp: 0,
+           inc: 0
+       },
+       budget = 0
 
     }
 
@@ -66,9 +67,11 @@ var budgetController = (function(){
 
         calculateBudget: function(){
             //1. Calculate total income and expensive
+            calculateTotal('inc');
+            calculateTotal('exp');
             
             //2. Calculate the budget: income - expenses
-            
+            data.budget = data.totals.inc - data.totals.exp
 
             //3. Calculate percentages
 
