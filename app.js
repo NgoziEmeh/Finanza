@@ -75,7 +75,12 @@ var budgetController = (function(){
             data.budget = data.totals.inc - data.totals.exp;
 
             //3. Calculate percentages
-            data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
+            if (data.totals.inc > 0){
+                data.percentage = Math.round((data.totals.exp / data.totals.inc) * 100);
+            }else {
+                data.percentage = -1;
+            }
+            
 
         },
 
@@ -196,6 +201,7 @@ var controller = (function(budgetCtrl, UICtrl){
         //2. Return the budget
         var budget = budgetCtrl.getBudget();
         //3. Display the budget on user interface
+        console.log(budget);
 
     }
 
