@@ -194,6 +194,7 @@ var controller = (function(budgetCtrl, UICtrl){
         //1. Calculate the budget
         budgetCtrl.calculateBudget();
         //2. Return the budget
+        var budget = budgetCtrl.getBudget();
         //3. Display the budget on user interface
 
     }
