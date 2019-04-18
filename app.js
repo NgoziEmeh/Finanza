@@ -172,8 +172,14 @@ var UIController = (function(){
         displayBudget: function(obj){
             document.querySelector(DOMstrings.incomeLabel).textContent = obj.totalInc;
             document.querySelector(DOMstrings.expensesLabel).textContent = obj.totalExp;
-            document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage;
             document.querySelector(DOMstrings.budgetLabel).textContent = obj.budget;
+            
+
+            if(obj.percentage > 0){
+                document.querySelector(DOMstrings.percentageLabel).textContent = obj.percentage + '%';
+            } else {
+                document.querySelector(DOMstrings.percentageLabel).textContent = '--';
+            }
 
         },
 
